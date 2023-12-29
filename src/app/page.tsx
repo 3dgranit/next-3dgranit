@@ -9,6 +9,7 @@ import React from "react";
 import Choose from "@/app/components/Choose/Choose";
 import Work from "@/app/components/Work/Work";
 import Contact from "@/app/components/Contact/Contact";
+import Footer from "@/app/components/Footer/Footer";
 // @ts-ignore
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
                 <Choose />
                 <Work />
                 <Contact />
+                <Footer />
 
 
             </main>
