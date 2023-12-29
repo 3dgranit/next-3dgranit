@@ -1,0 +1,464 @@
+@mixin wrapperTopMenu {
+  position: fixed;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 15;
+
+  transition: all .3s;
+}
+
+.main{
+  padding-top: 120px;
+}
+.wrapperTopMenuActive {
+  @include wrapperTopMenu;
+  background: black;
+  color: white;
+
+  .logo {
+    background: white;
+  }
+}
+
+.wrapperTopMenu {
+  @include wrapperTopMenu;
+  height: 70px;
+}
+.mobileMenu{
+  position: absolute;
+  padding: 15px;
+  top: 70px;
+  left: 0;
+  background: white;
+  width: 100%;
+  color: black;
+  display: flex;
+
+  ul {
+    width: 50%;
+    list-style-type: none;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    li {
+      font-size: 18px;
+    }
+
+  }
+
+  a img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.mobileItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.lineLoader {
+  height: 2px;
+  position: absolute;
+  background: #f0f07d;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  @media (max-width: 1920px) {
+    padding: 0 20px;
+  }
+}
+
+.ul {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  list-style-type: none;
+
+  @media (max-width: 1180px) {
+    display: none;
+  }
+
+  & li {
+    transition: all .3s;
+    text-transform: uppercase;
+  }
+
+  & li:hover {
+    color: #f0f07d
+  }
+
+
+  & li:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.menuClose {
+  display: none;
+}
+
+.menuOpen {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+
+  @media (max-width: 1180px) {
+  }
+
+}
+
+.logo {
+  transition: all .3s;
+  width: 215px;
+  height: 70px;
+  margin-right: 40px;
+  padding-top: 10px;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+}
+
+.contact {
+  margin-left: auto;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  @media (max-width: 1180px) {
+    display: none;
+  }
+}
+
+.btnMenu {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+  display: none;
+
+  @media (max-width: 1180px) {
+    display: block;
+  }
+
+  & div span {
+    width: 40px;
+    height: 3px;
+    background: white;
+    display: block;
+
+    &:after {
+      content: '';
+      width: 40px;
+      height: 3px;
+      background: white;
+      position: relative;
+      top: 10px;
+      display: block;
+    }
+    &:before {
+      content: '';
+      width: 40px;
+      height: 3px;
+      background: white;
+      position: relative;
+      top: -13px;
+      display: block;
+    }
+  }
+}
+
+.btnMenuOpen {
+  & div {
+    & span {
+      background: transparent;
+      &:after {
+        transform: rotate(45deg);
+        top: -2px;
+        background: white;
+      }
+      &:before {
+        transform: rotate(-45deg);
+        background: white;
+        top: 2px;
+      }
+    }
+
+  }
+
+  //'': {
+  //'': {
+  //
+  //},
+  //'': {
+
+  //},
+  //'&:before': {
+  //    transform: 'rotate(-45deg)',
+  //    background: '#f0f07d',
+  //    top: 2
+  //}
+}
+//
+//export const useStyles = makeStyles(theme => ({
+//    btnMenu: {
+//        height: 40,
+//        background: 'transparent',
+//        border: 'none',
+//        cursor: 'pointer',
+//        transition: 'all .3s',
+//    '&:hover': {
+//    '& div span': {
+//        transition: 'all .3s',
+//        background: '#f0f07d',
+//    },
+//    '& div:after': {
+//        transition: 'all .3s',
+//        background: '#f0f07d',
+//    },
+//    '& div:before': {
+//        transition: 'all .3s',
+//        background: '#f0f07d',
+//    }
+//    },
+//    '& div span': {
+//        width: 40,
+//        height: 3,
+//        background: 'white',
+//        display: 'block'
+//    },
+//    '& div': {
+//    '&:after': {
+//        content: '\'\'',
+//        width: 40,
+//        height: 3,
+//        background: 'white',
+//        position: 'relative',
+//        top: 10,
+//        display: 'block'
+//    },
+//    '&:before': {
+//        content: '\'\'',
+//        width: 40,
+//        height: 3,
+//        background: 'white',
+//        position: 'relative',
+//        top: -10,
+//        display: 'block'
+//    }
+//    }
+//    },
+//btnMenuOpen: {
+//'& div': {
+//'& span': {
+//    transform: 'scale(0)'
+//},
+//'&:after': {
+//    transform: 'rotate(45deg)',
+//    background: '#f0f07d',
+//    top: -4
+//},
+//'&:before': {
+//    transform: 'rotate(-45deg)',
+//    background: '#f0f07d',
+//    top: 2
+//}
+//
+//}
+//},
+//menuOpen: {
+//    display: 'flex'
+//},
+//menuClose: {
+//    display: 'none'
+//},
+//menu: {
+//
+//[theme.breakpoints.up('md')]: {
+//    display: 'flex',
+//},
+//[theme.breakpoints.between('xs', 'sm')]: {
+//    position: 'absolute',
+//    bottom: -300,
+//    left: 0,
+//    right: 0,
+//    flexDirection: 'column',
+//    background: '#434242',
+//    height: 300,
+//    padding: 15,
+//'& ul': {
+//    flexDirection: 'column',
+//    textAlign: 'center',
+//'& li': {
+//    marginBottom: 20,
+//
+//}
+//}
+//},
+//},
+//container: {
+//    display: 'flex',
+//    justifyContent: 'space-between',
+//    alignItems: 'center'
+//},
+//
+//},
+//wrapperTopMenu: {
+//    position: 'fixed',
+//    top: 0,
+//    height: 70,
+//    display: 'flex',
+//    alignItems: 'center',
+//    zIndex: 15,
+//    background: 'transparent',
+//    transition: 'all .3s',
+//[theme.breakpoints.between('xs', 'sm')]: {
+//    background: 'black',
+//},
+//},
+//ul: {
+//    display: 'flex',
+//    color: '#ffffff',
+//    fontSize: 18,
+//    fontWeight: 500,
+//'& li': {
+//    textTransform: 'uppercase',
+//'& a': {
+//    color: 'white',
+//    textDecoration: 'none',
+//    fontFamily: 'Roboto, Arial, sans-serif',
+//    position: 'relative',
+//    transition: 'all .3s',
+//'&:after': {
+//    content: '\'\'',
+//    transition: 'all .3s',
+//    transform: 'scale(0)'
+//},
+//'&:hover': {
+//    color: '#f0f07d',
+//    cursor: 'pointer',
+//    transition: 'all .3s',
+//'&:after': {
+//    content: '\'\'',
+//    transition: 'all .3s',
+//    width: '100%',
+//    transform: 'scale(1)',
+//    height: 2,
+//    background: '#f0f07d',
+//    position: 'absolute',
+//    left: 0,
+//    bottom: -2
+//
+//}
+//
+//}
+//},
+//'& a.active': {
+//    color: '#f0f07d',
+//'&:after': {
+//    content: '\'\'',
+//    transition: 'all 1s',
+//    width: '100%',
+//    transform: 'scale(1)',
+//    height: 2,
+//    background: '#f0f07d',
+//    position: 'absolute',
+//    left: 0,
+//    bottom: -2
+//
+//}
+//}
+//},
+//'& li:not(:last-child)': {
+//    paddingRight: 15,
+//[theme.breakpoints.between('xs', 'sm')]: {
+//    paddingRight: 0
+//}
+//}
+//},
+//linkPhone: {
+//    fontSize: 18,
+//    color: '#f0f07d',
+//    textDecoration: 'none',
+//    fontFamily: 'Roboto, Arial, sans-serif'
+//},
+//lineLoader: {
+//    height: 2,
+//    position: 'absolute',
+//    background: '#f0f07d',
+//    top: 0,
+//    left: 0,
+//    right: 0,
+//},
+//logo: {
+//    transition: 'all .3s',
+//    width: 215,
+//    marginRight: 40,
+//    paddingTop: 10,
+//    borderRadius: '0px 0px 10px 10px',
+//    position: 'relative',
+//    zIndex: 10,
+//'&:hover': {
+//    cursor: 'pointer'
+//}
+//},
+//logoOpen: {
+//    boxShadow:' 0 0 10px rgb(0 0 0 / 50%)',
+//    background: 'white'
+//},
+//logoClose: {
+//},
+//logoMobile: {
+//    transition: 'all .3s',
+//    width: 215,
+//    marginRight: 40,
+//    paddingTop: 10,
+//    borderRadius: '0px 0px 10px 10px',
+//    position: 'relative',
+//    zIndex: 10,
+//    boxShadow:' 0 0 10px rgb(0 0 0 / 50%)',
+//    background: 'white',
+//'&:hover': {
+//    cursor: 'pointer'
+//}
+//
+//},
+//linkSocial: {
+//    display: 'inline-block',
+//    padding: '0 5px',
+//'& img': {
+//    width: 30,
+//    height: 30,
+//    transition: 'all.3s',
+//'&:hover': {
+//    cursor: 'pointer'
+//}
+//}
+//
+//}
+//}));
