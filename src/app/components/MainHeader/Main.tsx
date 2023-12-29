@@ -33,10 +33,6 @@ export default function MainHeader() {
         id: 4,
         href: "https://t.me/artem_shishlov",
         content: <Image src={iconTelegram} alt="iconTelegram"/>
-    }, {
-        id: 5,
-        href: "https://www.pinterest.com/3dgranit/_created/",
-        content: <Image src={iconPinterest} alt="iconPinterest"/>
     }]
     const navLinks: INavLink[] = [
         {url: '/#work', label: 'Цены'},
