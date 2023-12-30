@@ -5,7 +5,6 @@ import React from 'react'
 import classes from './page.module.scss'
 import MainHeader from "@/app/components/MainHeader/Main";
 
-import ImageGallery from "react-image-gallery";
 import FullImage from "@/app/components/FullImage/FullImage";
 import Footer from "@/app/components/Footer/Footer";
 
