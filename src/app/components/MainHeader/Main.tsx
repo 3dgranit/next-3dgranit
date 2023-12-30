@@ -9,7 +9,6 @@ import {INavLink} from "@/app/types";
 import iconWhatsapp from "../../../../public/whatsapp.png"
 import iconViber from "../../../../public/viber.png"
 import iconTelegram from "../../../../public/telegram.png"
-import iconPinterest from "../../../../public/pinterest.png"
 
 export default function MainHeader() {
 
@@ -104,7 +103,7 @@ export default function MainHeader() {
                         {
                             data.map(({id, href, content}, inx) => {
                                 return (
-                                    <a key={id} href={href} target={'_blank'}>
+                                    <a key={id} href={href} target={'_blank'} rel="noreferrer" >
                                         {content}
                                     </a>
                                 )
@@ -126,7 +125,7 @@ export default function MainHeader() {
                             {
                                 data.map(({id, href, content}, inx) => {
                                     return (
-                                        <a key={id} href={href} target={'_blank'}>
+                                        <a key={id} href={href} target={'_blank'} rel="noreferrer" >
                                             {content}
                                         </a>
                                     )

@@ -125,14 +125,14 @@ export const Review = () => {
                                 <div className={classes.links}>
                                 {
                                     siteUrl && (
-                                        <Link href={siteUrl} target="_blank">
+                                        <Link href={siteUrl} target="_blank" rel="noreferrer" >
                                             <Image src={iconSite} alt={siteUrl} style={{width: 35, height: 35}} />
                                         </Link>
                                     )
                                 }
                                 {
                                     instagramUrl && (
-                                        <Link href={instagramUrl} target="_blank">
+                                        <Link href={instagramUrl} target="_blank" rel="noreferrer" >
                                             <Image src={iconInstagram} alt={instagramUrl} style={{width: 35, height: 35}} />
                                         </Link>
                                     )
