@@ -144,19 +144,5 @@ export const Review = () => {
                 }
             </Slider>
         </div>
-        // <Box py={10} style={{background: '#f2f2f2'}} id="reviews" className="section">
-        //     <Container maxWidth="lg">
-        //         <Grid container spacing={0}>
-        //             <Box pb={5} component={Grid} item xs={12} align="center">
-        //                 <Typography variant="h3" component="h3" className={classes.title} data-aos="fade-up"
-        //                             data-aos-duration="1500">Что говорят клиенты о работе со мной</Typography>
-        //             </Box>
-        //             <Grid item xs={12}>
-        //
-        //             </Grid>
-        //         </Grid>
-        //     </Container>
-        //
-        // </Box>
     )
 }

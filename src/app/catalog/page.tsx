@@ -6,8 +6,12 @@ import classes from './page.module.scss'
 import MainHeader from "@/app/components/MainHeader/Main";
 
 import ImageGallery from "react-image-gallery";
+import FullImage from "@/app/components/FullImage/FullImage";
+import Footer from "@/app/components/Footer/Footer";
 
 export default () => {
+    const [show, setShow] = React.useState(false);
+    const [image, setImage] = React.useState('');
     const images = [
         {
             original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F1.png?alt=media&token=97e41c88-0c1a-467e-8695-e912361b2de4",
@@ -55,14 +59,38 @@ export default () => {
             thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F11.png?alt=media&token=15eb9e81-09cc-4e06-8ab3-2b4081f1d710",
         },
     ];
+
+    function handleClick(value: string) {
+        setImage(value)
+        setShow(!show);
+
+    }
+
+
+    function handleClose() {
+        setShow(false)
+    }
+
     return (
         <>
             <MainHeader/>
             <section className={classes.section}>
                 <div className={classes.wrapper}>
-                    <ImageGallery items={images} />
+                    <div className={classes.container}>
+                        {
+                            images.map(el => {
+                                return (
+                                    <div key={el.original} className={classes.card} onClick={() => handleClick(el.original)}>
+                                        <img src={el.original} alt={el.original}/>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </section>
+            <FullImage image={image} show={show} close={handleClose} />
+            <Footer />
         </>
     )
 

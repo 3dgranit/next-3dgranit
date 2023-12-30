@@ -1,6 +1,7 @@
 .section{
   margin-top: 200px;
-  margin-bottom: 100px
+  margin-bottom: 100px;
+  min-height: 800px;
 }
 
 .wrapper {
@@ -8,8 +9,32 @@
   margin: 0 auto;
 
   img {
-    width: 50%;
+    width: 80%;
     height: auto;
   }
 }
 
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+
+  @media (max-width: 1180px) {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  & img{
+    transition: all 0.2s ease;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    }
+
+  }
+}
