@@ -1,4 +1,3 @@
-
 import MainHeader from "@/app/components/MainHeader/Main";
 import About from "@/app/components/about/About";
 import {Header} from "@/app/components/Header/Header";
