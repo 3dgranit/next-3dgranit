@@ -13,49 +13,72 @@ export default () => {
     const [image, setImage] = React.useState('');
     const images = [
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F1.png?alt=media&token=97e41c88-0c1a-467e-8695-e912361b2de4",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F1.png?alt=media&token=97e41c88-0c1a-467e-8695-e912361b2de4",
+            original: "/catalog/01.webp",
+            thumbnail: "/catalog/01.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F2.png?alt=media&token=bf4b670e-0761-439c-ac03-3290a84cd0e2",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F2.png?alt=media&token=bf4b670e-0761-439c-ac03-3290a84cd0e2",
+            original: "/catalog/02.webp",
+            thumbnail: "/catalog/02.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F3.png?alt=media&token=85515eb7-7190-4b49-910e-13990dd6476a",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F3.png?alt=media&token=85515eb7-7190-4b49-910e-13990dd6476a",
-        },
-
-        {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F4.png?alt=media&token=012f121d-8fcf-42cd-a12a-018a762b3922",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F4.png?alt=media&token=012f121d-8fcf-42cd-a12a-018a762b3922",
+            original: "/catalog/03.webp",
+            thumbnail: "/catalog/03.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F5.png?alt=media&token=90bb8204-3e5a-4d22-a635-e1966de64b38",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F5.png?alt=media&token=90bb8204-3e5a-4d22-a635-e1966de64b38",
+            original: "/catalog/04.webp",
+            thumbnail: "/catalog/04.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F6.png?alt=media&token=ae7065be-78e3-416b-9f19-12bb0e85efaf",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F6.png?alt=media&token=ae7065be-78e3-416b-9f19-12bb0e85efaf",
+            original: "/catalog/05.webp",
+            thumbnail: "/catalog/05.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F7.png?alt=media&token=85ab17a8-f1c9-47d5-982a-c9273eb52172",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F7.png?alt=media&token=85ab17a8-f1c9-47d5-982a-c9273eb52172",
+            original: "/catalog/06.webp",
+            thumbnail: "/catalog/06.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F8.png?alt=media&token=1e6901da-749c-4fca-acb5-6fe267875e99",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F8.png?alt=media&token=1e6901da-749c-4fca-acb5-6fe267875e99",
+            original: "/catalog/07.webp",
+            thumbnail: "/catalog/07.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F9.png?alt=media&token=38f00bbb-926e-4eb3-8387-93031dc0055e",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F9.png?alt=media&token=38f00bbb-926e-4eb3-8387-93031dc0055e",
+            original: "/catalog/08.webp",
+            thumbnail: "/catalog/08.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F10.png?alt=media&token=1740dff3-de87-475f-a7e6-45711ac28a25",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F10.png?alt=media&token=1740dff3-de87-475f-a7e6-45711ac28a25",
+            original: "/catalog/09.webp",
+            thumbnail: "/catalog/09.webp",
         },
         {
-            original: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F11.png?alt=media&token=15eb9e81-09cc-4e06-8ab3-2b4081f1d710",
-            thumbnail: "https://firebasestorage.googleapis.com/v0/b/mara-b5982.appspot.com/o/artem%2F11.png?alt=media&token=15eb9e81-09cc-4e06-8ab3-2b4081f1d710",
+            original: "/catalog/10.webp",
+            thumbnail: "/catalog/10.webp",
+        },
+        {
+            original: "/catalog/11.webp",
+            thumbnail: "/catalog/11.webp",
+        },
+        {
+            original: "/catalog/12.webp",
+            thumbnail: "/catalog/12.webp",
+        },
+        {
+            original: "/catalog/13.webp",
+            thumbnail: "/catalog/13.webp",
+        },
+        {
+            original: "/catalog/14.webp",
+            thumbnail: "/catalog/14.webp",
+        },
+        {
+            original: "/catalog/15.webp",
+            thumbnail: "/catalog/15.webp",
+        },
+        {
+            original: "/catalog/16.webp",
+            thumbnail: "/catalog/16.webp",
+        },
+        {
+            original: "/catalog/17.webp",
+            thumbnail: "/catalog/17.webp",
         },
     ];
 

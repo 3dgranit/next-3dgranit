@@ -43,12 +43,12 @@ const Contact = () => {
                         `
                     })
                         .then(function (response) {
-                            console.log(response);
+                            // console.log(response);
                         })
                         .catch(function (error) {
                             console.log(error);
                         });
-                    console.log(response);
+                    // console.log(response);
                 })
                 .catch(function (error) {
                     // handle error
@@ -73,12 +73,6 @@ const Contact = () => {
         }
         getBotUpdates()
         // Access values from state variables
-        console.log('Email:', email);
-        console.log('Phone:', phone);
-        console.log('WhatsApp Checked:', whatsappChecked);
-        console.log('Viber Checked:', viberChecked);
-        console.log('Telegram Checked:', telegramChecked);
-        console.log('Message:', message);
         setCaptcha(null)
         setEmail('')
         setPhone('');

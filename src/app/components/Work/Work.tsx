@@ -69,7 +69,6 @@ export const Work = () => {
         const textarea = document.querySelector('textarea');
         if (textarea) {
             textarea.innerHTML = title;
-            console.log('textarea', textarea)
             textarea.focus();
         }
 

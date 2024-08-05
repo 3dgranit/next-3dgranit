@@ -73,7 +73,6 @@ export default function MainHeader() {
 
         let sizeScrollProcent = (window.pageYOffset + document.documentElement.clientHeight) * 100 / scrollHeight;
         setScrollProcent(sizeScrollProcent > 30 ? sizeScrollProcent : 0)
-        console.log(sizeScrollProcent);
     };
 
     useEffect(() => {
